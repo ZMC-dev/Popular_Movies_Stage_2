@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.zoilymontes.com.popularmovies_stage2"
+    tools:ignore="GoogleAppIndexingWarning">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="app.zoilymontes.com.popularmovies_stage2.UI.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.zoilymontes.com.popularmovies_stage2.UI.DetailActivity"
+            android:label="@string/title_activity_detailed"
+            android:parentActivityName=".UI.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="app.zoilymontes.com.popularmovies_stage2.Database.MovieProvider"
+            android:authorities="app.zoilymontes.com.popularmovies_stage2"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="app.zoilymontes.com.popularmovies_stage2.UI.FavoriteMovieActivity"
+            android:label="Favorites"
+            android:parentActivityName=".UI.MainActivity" />
+        <activity
+            android:name="app.zoilymontes.com.popularmovies_stage2.UI.FavoriteMovieDetails"
+            android:label="Favorites"
+            android:parentActivityName=".UI.FavoriteMovieActivity" />
+
+        <activity android:name="app.zoilymontes.com.popularmovies_stage2.UI.MovieTrailerActivity"
+            android:label="Movie Videos"></activity>
+    </application>
+
+</manifest>

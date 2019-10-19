@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Popular Movies - Stage 2</string>
+    <string name="title_activity_detailed">Movie Name</string>
+    <string name="action_settings">Share</string>
+    <!-- TODO! Add your API key here! -->
+    <string name="API_key">85241ff5a54a9a54690bd91c4274d78d</string>
+
+</resources>
